@@ -80,19 +80,7 @@ const App = () => {
 export default App
 ```
 
-Clear out the contents of the `App.css` file in the `src` directory. Add the following CSS to the `App.css` file:
 
-```css
-ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-li {
-  list-style: none;
-  margin: 10px;
-}
-```
 
 ### Running the development server
 
@@ -135,6 +123,7 @@ Welcome to the React State Management Lab! In this lab, we'll be interacting wit
 - Add characters to your team from a given list.
 - Remove characters from your team.
 - Display the team's total cost, strength, and agility.
+- style using css modules
 
 Let’s dive in!
 
