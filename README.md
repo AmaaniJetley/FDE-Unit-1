@@ -47,21 +47,6 @@ Open the project's folder in your code editor:
 code .
 ```
 
-### Configuring ESLint
-
-Before we begin, we need to adjust the ESLint configuration. Add the following rules to the `.eslintrc.cjs` file:
-
-```js
-rules: {
-  'react-refresh/only-export-components': [
-    'warn',
-    { allowConstantExport: true },
-  ],
-  'react/prop-types': 'off', // add this line
-  'react/no-unescaped-entities': 'off' // add this line
-},
-```
-
 The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
 
 ### Clear `App.jsx`
