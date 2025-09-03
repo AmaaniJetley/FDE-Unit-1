@@ -16,53 +16,28 @@ In this lab, you'll utilize React's state management to add and remove team memb
 
 ## Setup
 
-Open your Terminal application and navigate to your `~/code/ga/labs` directory:
-
-```bash
-cd ~/code/ga/labs
-```
+Clone this repo and then 
 
 Create a new Vite project for your React app:
 
 ```bash
-npm create vite@latest
+npm create vite@latest state-management-lab -- --template react-ts
 ```
 
-You'll be prompted to choose a project name. Let's name it `react-state-management-lab`. 
-
-- Select a framework. Use the arrow keys to choose the `React` option and hit `Enter`.
-
-- Select a variant. Use the arrow keys to choose `TypeScript` and hit `Enter`.
-
-Navigate to your new project directory and install the necessary dependencies:
+Normally we would navigate to the new project directory and install the necessary dependencies:
 
 ```bash
 cd react-state-management-lab
 npm i
 ```
 
+but since we're using Docker, we can use our `docker-compose up --build` command to start and stop our server
+
 Open the project's folder in your code editor:
 
 ```bash
 code .
 ```
-
-### Configuring ESLint
-
-Before we begin, we need to adjust the ESLint configuration. Add the following rules to the `.eslintrc.cjs` file:
-
-```js
-rules: {
-  'react-refresh/only-export-components': [
-    'warn',
-    { allowConstantExport: true },
-  ],
-  'react/prop-types': 'off', // add this line
-  'react/no-unescaped-entities': 'off' // add this line
-},
-```
-
-The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
 
 ### Clear `App.tsx`
 
