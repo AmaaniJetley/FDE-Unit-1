@@ -24,14 +24,14 @@ Create a new Vite project for your React app:
 npm create vite@latest state-management-lab -- --template react-ts
 ```
 
-Normally we would navigate to the new project directory and install the necessary dependencies:
+navigate to the new project directory and install the necessary dependencies:
 
 ```bash
 cd react-state-management-lab
 npm i
 ```
 
-but since we're using Docker, we can use our `docker-compose up --build` command to start and stop our server
+but since we're using Docker, go back to where the Dockerfile is `cd ..` then  we can use our `docker-compose up --build` command to start and stop our server
 
 Open the project's folder in your code editor:
 
