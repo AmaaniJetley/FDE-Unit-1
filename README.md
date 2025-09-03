@@ -41,6 +41,8 @@ cd react-state-management-lab
 npm i
 ```
 
+**note** - you may have to `sudo npm install` incase you get the permission errors for the es-lint
+
 Open the project's folder in your code editor:
 
 ```bash
@@ -79,10 +81,10 @@ li {
 
 ### Running the development server
 
-To start the development server and view our app in the browser, we'll use the following command:
+To start the development server and view our app in the browser, we'll use the following command (where are Dockerfile is)
 
 ```bash
-npm run dev
+docker-compose up --build
 ```
 
 You should see that `Vite` is available on port number 5173:
