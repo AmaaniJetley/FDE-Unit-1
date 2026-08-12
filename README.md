@@ -1,57 +1,57 @@
-# ![React State Management Lab](./assets/hero.png)
+# React State Management Lab
 
-## About
+![React State Management Lab](./assets/hero.png)
 
-Reactville is on high alert! As bizarre rumors turn into chilling reality, the city council has called for immediate action to safeguard the town and its inhabitants - against a looming zombie apocalypse!
+#### About
 
-Your mission is to strategically assemble a survival team, handpicking members from the city’s diverse population, each bringing their unique skills and quirks. As the city's newly appointed Survival Strategist, you will manage your team's skills, resources, and stats.
+Reactville is on high alert. As bizarre rumors turn into chilling reality, the city council has called for immediate action to safeguard the town and its inhabitants against a looming zombie apocalypse.
+
+Your mission is to strategically assemble a survival team, handpicking members from the city's diverse population, each bringing their unique skills and quirks. As the city's newly appointed Survival Strategist, you will manage your team's skills, resources, and stats.
 
 ![Solution UI](./assets/solution-ui.png)
 
-In this lab, you'll utilize React’s state management to add and remove team members, track essential resources, and monitor your team's overall readiness. This isn't just about surviving; it's about making dynamic UI updates and understanding the inner workings of React state through a fun and engaging simulation.
+In this lab, you'll utilize React's state management to add and remove team members, track essential resources, and monitor your team's overall readiness. This isn't just about surviving, it's about making dynamic UI updates and understanding the inner workings of React state through a fun and engaging simulation.
 
-## Prerequisites
+#### Prerequisites
 
 - React State Management
 
-## Setup
+#### Setup
 
-Open your Terminal application and navigate to your `~/code/ga/labs` directory:
+Open your terminal application and navigate to your `~/code/ga/labs` directory:
 
 ```bash
 cd ~/code/ga/labs
 ```
 
-Create a new Vite project for your React app:
+Clone the `react-state-management-lab` repo and `cd` into it:
 
 ```bash
-npm create vite@latest
+git clone <repo-url> react-state-management-lab
+cd react-state-management-lab
 ```
 
-You'll be prompted to choose a project name. Let's name it `react-state-management-lab`.
-
-- Select a framework. Use the arrow keys to choose the `React` option and hit `Enter`.
-
-- Select a variant. Again, use the arrow keys to choose `JavaScript` and hit `Enter`.
-
-Navigate to your new project directory and install the necessary dependencies:
+Create a new Vite project inside the cloned repo:
 
 ```bash
-cd react-state-management-lab
+npm create vite@latest . -- --template react
+```
+
+If prompted about the directory not being empty, choose to keep your existing files.
+
+Install the necessary dependencies:
+
+```bash
 npm i
 ```
 
-**note** - you may have to `sudo npm install` incase you get the permission errors for the es-lint
+If you run into eslint permission errors during install, try running the install with `sudo npm install` instead.
 
 Open the project's folder in your code editor:
 
 ```bash
 code .
 ```
-
-The first addition prevents warnings if you're not declaring types for your props (which we're not), and the second prevents warnings if you're using contractions within JSX.
-
-### Clear `App.jsx`
 
 Open the `App.jsx` file in the `src` directory and replace the contents of it with the following:
 
@@ -79,51 +79,30 @@ li {
 }
 ```
 
-### Running the development server
-
-To start the development server and view our app in the browser, we'll use the following command (where are Dockerfile is)
+To start the development server and view our app in the browser, run:
 
 ```bash
-docker-compose up --build
+npm run dev
 ```
 
-You should see that `Vite` is available on port number 5173:
+You should see that Vite is available on port number 5173:
 
 ```plaintext
 localhost:5173
 ```
 
-### GitHub setup
+#### The Challenge
 
-To add this project to GitHub, initialize a Git repository:
-
-```bash
-git init
-git add .
-git commit -m "init commit"
-```
-
-Make a new repository on [GitHub](https://github.com/) named react-state-management-lab.
-
-Link your local project to your remote GitHub repo:
-
-```bash
-git remote add origin https://github.com/<github-username>/react-state-management-lab.git
-git push origin main
-```
-
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
-
-Welcome to the React State Management Lab! In this lab, we'll be interacting with state to get a better understanding of how to manage it in a React application. Your task is to assemble a team of characters to survive a zombie apocalypse. You will:
+Welcome to the React State Management Lab. In this lab, we'll be interacting with state to get a better understanding of how to manage it in a React application. Your task is to assemble a team of characters to survive a zombie apocalypse. You will:
 
 - Add characters to your team from a given list.
 - Remove characters from your team.
 - Display the team's total cost, strength, and agility.
-- Add a unit test that makes sense. Your choice
+- Add a unit test that makes sense. Your choice.
 
-Let’s dive in!
+Let's dive in.
 
-Data
+Here's the data you'll be working with:
 
 ```js
 [
@@ -200,8 +179,10 @@ Data
 ];
 ```
 
-## Hints
+#### Hints
 
-- You should never change state directly. If you need to make a copy of an array you can use the syntax `const copyArray = [...sourceArray]`.
-- You can use the `reduce` method to get the total strength and agility of the team.
-- You can use `https://jsonplaceholder.typicode.com/photos` to get images for the characters. These are just random photos and don't have anything to do with the characters.
+You should never change state directly. If you need to make a copy of an array, you can use the syntax `const copyArray = [...sourceArray]`.
+
+You can use the `reduce` method to get the total strength and agility of the team.
+
+You can use `https://jsonplaceholder.typicode.com/photos` to get images for the characters. These are just random photos and don't have anything to do with the characters.
